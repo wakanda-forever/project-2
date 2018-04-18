@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Form. Will it work?</h1>
+    <form class="form" action="{% url 'index'%}" method="post">
+      {{form.as_p}}
+      {% csrf_token %}
+      <input type="submit" value="Submit">
+    </form>
+
+  </body>
+</html>
